@@ -1,5 +1,6 @@
 var express = require('express');
 var request = require('request');
+const PORT = process.env.PORT || 5000;
 var app = express();
 
 app.use(function(req, res, next) {
@@ -35,6 +36,6 @@ app.get('/api', function(req, res) {
   });
 });
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(PORT, function () {
+  console.log(`Listening on ${ PORT }`);
 });
