@@ -9,10 +9,8 @@
   },
   "author": "Celina Uemura <celina.uemura@gmail.com>",
   "license": "ISC",
-  "devDependencies": {
-    "express": "^4.16.4"
-  },
   "dependencies": {
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "express": "^4.16.4"
   }
 }
