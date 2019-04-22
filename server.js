@@ -25,8 +25,11 @@ app.get('/api', function(req, res) {
   var query = JSON.parse('{"' + search.replace(/&/g, '","').replace(/=/g,'":"') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) });
 
   console.log('calling API: ' + API_URL + query.location);
-
-  request(API_URL + query.location, function (error, response, body) {
+  var url = API_URL + query.location;
+  if (query.units) {
+    url += '?units=' + query.units; 
+  }
+  request(url, function (error, response, body) {
     console.error('error:', error); // Print the error if one occurred
     if (response && response.statusCode == 200) { 
       res.send(body); // Print the HTML for the Google homepage.
