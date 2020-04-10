@@ -13,4 +13,4 @@ npm install
 npm start
 ```
 
-Access http://localhost:3000/api/?location=`lat`,`lng`
+Access http://localhost:3000/api/?location=[lat],[lng]
